@@ -34,7 +34,30 @@
 }
 
 #logo{
-    width: 1px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: darkgray;
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url('logo1.png');
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+#logo:hover{
+    opacity: 1;
+}
+
+//Overide the padding
+#active{
+    float: left;
+    padding:0;
 }
 
 
