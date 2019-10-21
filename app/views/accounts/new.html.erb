@@ -1,0 +1,61 @@
+
+<!--Wallpaper and navigation bar-->
+        <div class = "wallpaper">
+            
+            <nav class="nav">
+                <!--Logo image-->
+                
+                    <a id="active" href="#">
+                        <img id="logo" alt="logo">
+                    </a>
+                
+                
+                <a href="">About</a>
+                <a href="">User</a>
+                <a href="">User Info</a>
+                <a id="lesson_nav" href="">Lesson</a>            
+                        
+        
+
+            </nav>
+            
+        </div><!--End wallpaper and navigation bar-->
+<h1 class="title">Create New Account</h1>
+
+<%= form_for :account, url: accounts_path do |a| %>
+<div class= "form">
+    <p class="input-form">
+        <%= a.label :title,  "First Name" %><br>
+        <%= a.text_field :title %>
+    </p>
+    
+    <p class="input-form">
+        <%= a.label :title, "Last Name:" %><br>
+        <%= a.text_field :title %>
+    </p>
+    
+    <p class="input-form">
+        <%= a.label :title, "Email id:" %><br>
+        <%= a.text_field :title %>
+    </p>
+    
+    <p class="input-form">
+        <%= a.label :title, "Age:" %><br>
+        <%= a.text_field :title %>
+    </p>
+    
+    <p class="input-form">
+        <%= a.label :title, "User Name: " %><br>
+        <%= a.text_field :title %>
+    </p>
+   
+    <p class="input-form">
+        <%= a.label :title, "Password: " %><br>
+        <%= a.text_field :title %>
+    </p>
+   
+    <p class= "button">
+        <%= a.submit %>
+    </p>
+</div>
+<% end %>
