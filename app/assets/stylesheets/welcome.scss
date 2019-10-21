@@ -1,3 +1,70 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* Navigation bar */
+.nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.5% 3%;
+    float: right;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 8px;
+}
+#lesson_nav{
+    background-color: pink;
+}
+
+#lesson_nav:hover{
+    background-color: #b64fc2;
+}
+
+
+.nav a:hover{
+    background-color: #111;
+}
+
+.wallpaper{
+    background-image: image-url('wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+}
+
+#logo{
+    width: 1px;
+}
+
+
+
+/***************Media Query*****************/
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+
+    .wallpaper{
+        height: 250px;
+        position: relative;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
+    .wallpaper{
+        height: 500px;
+        position: relative;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1201px) {
+    .wallpaper{
+        background-size: cover;
+        height: 800px;
+        position: relative;
+    }
+    .nav a{
+        font-size: 30px;
+    }
+}
