@@ -6,7 +6,7 @@
                 <!--Logo image-->
                 
                     <a id="active">
-                        <img id="logo" alt="logo">
+                        <img id="logo" alt="logo" >
                         
                     </a>
                 
@@ -22,6 +22,7 @@
             
         </div><!--End wallpaper and navigation bar-->
 <h1 class="title">Create New Account</h1>
+
 
 <%= form_for :account, url: accounts_path do |a| %>
 <div class= "form">
@@ -60,3 +61,5 @@
     </p>
 </div>
 <% end %>
+ 
+<%= link_to 'Back',  welcome_index_url %>
