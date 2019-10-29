@@ -1,0 +1,27 @@
+<h1>
+    Listing Accounts
+</h1>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>User Name</th>
+    
+    
+  </tr>
+ 
+  <% @accounts.each do |a| %>
+    <tr>
+      <td><%= a.fName %></td>
+      <td><%= a.lName %></td>
+      <td><%= a.email %></td>
+      <td><%= a.age %></td>
+      <td><%= a.userName %></td>
+      
+      <td><%= link_to 'Show', account_path(a) %></td>
+    </tr>
+  <% end %>
+</table>

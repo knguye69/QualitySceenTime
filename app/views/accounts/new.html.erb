@@ -5,8 +5,8 @@
             <nav class="nav">
                 <!--Logo image-->
                 
-                    <a id="active">
-                        <img id="logo" alt="logo">
+                    <a id="active" href='https://f40947d2ac3b44efbfc27ccc3e63fb3b.vfs.cloud9.us-east-1.amazonaws.com'>
+                        <img id="logo" alt="logo" >
                     </a>
                 
                 
@@ -22,7 +22,7 @@
         </div><!--End wallpaper and navigation bar-->
 <h1 class="title">Create New Account</h1>
 
-<%= form_for :account, url: accounts_path do |a| %>
+<%= form_for :account , url: accounts_path do |a| %>
 <div class= "form">
     <p class="input-form">
         <%= a.label :fName,  "First Name" %><br>
