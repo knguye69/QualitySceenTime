@@ -5,11 +5,12 @@
             <nav class="nav">
                 <!--Logo image-->
                 
-<%= link_to welcome_index_path do %>
-                    <a id="active">
-                        <img id="logo" alt="logo" >
-                    </a>
-                <%end%>
+                    
+                    
+                    <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
+                
                 
                 <a href="">About</a>
                 <a href="">User</a>
@@ -24,7 +25,9 @@
 <h1 class="title">Create New Account</h1>
 
 
+
 <%= form_for :account, url: accounts_path do |a| %>
+
 <div class= "form">
     <p class="input-form">
         <%= a.label :fName,  "First Name" %><br>
