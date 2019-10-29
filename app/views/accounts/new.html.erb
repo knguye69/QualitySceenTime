@@ -5,11 +5,11 @@
             <nav class="nav">
                 <!--Logo image-->
                 
+<%= link_to welcome_index_path do %>
                     <a id="active">
                         <img id="logo" alt="logo" >
-                        
                     </a>
-                
+                <%end%>
                 
                 <a href="">About</a>
                 <a href="">User</a>
@@ -17,7 +17,7 @@
                 <a id="lesson_nav" href="">Lesson</a>            
                         
         
-
+ 
             </nav>
             
         </div><!--End wallpaper and navigation bar-->
@@ -62,4 +62,3 @@
 </div>
 <% end %>
  
-<%= link_to 'Back',  welcome_index_url %>
