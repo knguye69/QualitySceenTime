@@ -5,9 +5,11 @@
             <nav class="nav">
                 <!--Logo image-->
                 
-                    <a id="active" href='https://f40947d2ac3b44efbfc27ccc3e63fb3b.vfs.cloud9.us-east-1.amazonaws.com'>
-                        <img id="logo" alt="logo" >
-                    </a>
+                    
+                    
+                    <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
                 
                 
                 <a href="">About</a>
