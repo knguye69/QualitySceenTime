@@ -24,10 +24,13 @@ class AccountsController < ApplicationController
     
 end
 
+
     private 
         def account_params
             params.require(:account).permit(:fName,:lName,:email,:age,:userName,:password)
         end   
+
+
 
 
 

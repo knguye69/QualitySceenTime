@@ -5,11 +5,15 @@
             <nav class="nav">
                 <!--Logo image-->
                 
+
                     
                     
                     <%= link_to welcome_index_path do %>
                    <%= image_tag "", id: "logo" %>
                     <% end %>
+
+                    
+
                 
                 
                 <a href="">About</a>
@@ -24,40 +28,54 @@
         </div><!--End wallpaper and navigation bar-->
 <h1 class="title">Create New Account</h1>
 
-<%= form_for :account , url: accounts_path do |a| %>
-<div class= "form">
-    <p class="input-form">
-        <%= a.label :fName,  "First Name" %><br>
-        <%= a.text_field :fName %>
-    </p>
-    
-    <p class="input-form">
-        <%= a.label :lName, "Last Name:" %><br>
-        <%= a.text_field :lName %>
-    </p>
-    
-    <p class="input-form">
-        <%= a.label :email, "Email id:" %><br>
-        <%= a.text_field :email %>
-    </p>
-    
-    <p class="input-form">
-        <%= a.label :age, "Age:" %><br>
-        <%= a.text_field :age %>
-    </p>
-    
-    <p class="input-form">
-        <%= a.label :userName, "User Name: " %><br>
-        <%= a.text_field :userName %>
-    </p>
-   
-    <p class="input-form">
-        <%= a.label :password, "Password: " %><br>
-        <%= a.text_field :password %>
-    </p>
-   
-    <p class= "button">
-        <%= a.submit %>
-    </p>
-</div>
+
+
+
+
+<%= form_for :account, url: accounts_path do |a| %>
+<fieldset>
+    <legend>Form</legend>
+    <div class= "form row">
+        
+        <h3 class="form-title">User information: </h3>
+        
+        
+        <p class="input-form">
+            <%= a.label :fName,  "First Name" %><br>
+           <%= a.text_field :fName %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :lName, "Last Name:" %><br>
+            <%= a.text_field :lName %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :email, "Email id:  " %><br>
+            <%= a.text_field :email %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :age, "Age:" %><br>
+            <%= a.text_field :age %>
+        </p>
+        
+        <h3 class="form-title">Login information: </h3>
+        
+        <p class="input-form">
+            <%= a.label :userName, "User Name: " %><br>
+            <%= a.text_field :userName %>
+        </p>
+       
+        <p class="input-form">
+            <%= a.label :password, "Password: " %><br>
+           <%= a.text_field :password %>
+        </p>
+       
+        <p class= "button">
+            <%= a.submit %>
+        </p>
+    </div>
+</fieldset>
 <% end %>
+ 
