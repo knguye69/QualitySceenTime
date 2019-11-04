@@ -120,6 +120,20 @@ legend{
     float: right;
 }
 
+.button_with_no_border{
+    border: none;
+}
+
+
+/*--------Table --------*/
+th, td {
+  border: 1px solid #004D34;
+  padding: 20px;
+  text-align: center;
+}
+th{
+    background-color: #f58eef;
+}
 
 
 

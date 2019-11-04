@@ -13,7 +13,7 @@
                 
                 <a href="">About</a>
                 <%= link_to 'User',new_account_path%>
-                 <%= link_to 'User Info', accounts_path %>
+                <%= link_to 'User Info', accounts_path %>
                 <a id="lesson_nav" href="">Lesson</a>            
                         
         
@@ -49,7 +49,16 @@
       <td><%= a.age %></td>
       <td><%= a.userName %></td>
       
-      <td><%= link_to 'Show', account_path(a) %></td>
+      
+          <td class="button button_with_no_border"><%= link_to 'Show', account_path(a) %></td>
+      
+          <td class="button button_with_no_border"><%= link_to 'Edit', edit_account_path(a) %></td>
+          
+          <td class="button button_with_no_border"><%= link_to 'Destroy',
+                account_path(a),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+    
     </tr>
   <% end %>
 </table>
