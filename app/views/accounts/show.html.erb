@@ -1,0 +1,42 @@
+<!--Wallpaper and navigation bar-->
+        <div class = "wallpaper1">
+            
+            <nav class="nav">
+                <!--Logo image-->
+                
+                    
+                    
+                    <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
+                
+                
+                <a href="">About</a>
+                 <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %> 
+                <a id="lesson_nav" href="">Lesson</a>            
+                        
+        
+
+            </nav>
+            
+        </div><!--End wallpaper and navigation bar-->
+<p>
+    <strong>Last Name: </strong>
+    <%= @account.lName %>
+</p>
+
+<p>
+    <strong>First Name: </strong>
+    <%= @account.fName %>
+</p>
+
+<p>
+    <strong>Email: </strong>
+    <%= @account.email %>
+</p>
+
+<p>
+    <strong>User Name </strong>
+    <%= @account.userName %>
+</p>

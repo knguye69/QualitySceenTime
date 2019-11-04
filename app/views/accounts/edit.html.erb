@@ -1,45 +1,37 @@
-
 <!--Wallpaper and navigation bar-->
         <div class = "wallpaper1">
             
             <nav class="nav">
                 <!--Logo image-->
                 
-                    <a id="active">
-                        <img id="logo" alt="logo" >
-                        
-                    </a>
-
                     
                     
                     <%= link_to welcome_index_path do %>
                    <%= image_tag "", id: "logo" %>
                     <% end %>
-
-                    
-
-
                 
                 
                 <a href="">About</a>
-                <a href="">User</a>
-                <%= link_to 'User Info', accounts_path%> 
+                <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %>
                 <a id="lesson_nav" href="">Lesson</a>            
                         
         
 
             </nav>
-            
+             
         </div><!--End wallpaper and navigation bar-->
-<h1 class="title">Create New Account</h1>
-
-<%= form_for :account, url: accounts_path do |a| %>
-
-<% if @account.errors.any? %>
+        
+        
+<h1>Editing article</h1>
+ 
+<%= form_for :account, url: account_path(@account), method: :patch do |a| %>
+ 
+  <% if @account.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@account.errors.count, "error") %> prohibited
-        this article from being saved:
+        this account from being saved:
       </h2>
       <ul>
         <% @account.errors.full_messages.each do |msg| %>
@@ -48,9 +40,8 @@
       </ul>
     </div>
   <% end %>
-
-
-<fieldset>
+  
+  <fieldset>
     <legend>Form</legend>
     <div class= "form">
         
@@ -101,4 +92,3 @@
     </div>
 </fieldset>
 <% end %>
- 

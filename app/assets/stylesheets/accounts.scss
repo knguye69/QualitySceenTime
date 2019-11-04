@@ -3,9 +3,7 @@
     font-size: 85px;
     color: red;
 }
-.button{
-    float: right;
-}
+
 
 /* Navigation bar */
 .nav a{
@@ -53,7 +51,7 @@
     background-image: url('logo1.png');
     background-position: center;
     background-size: cover;
-    
+    padding: 0;
     
 }
 #logo:hover{
@@ -74,7 +72,7 @@
     display: block;
     width: 100%;
     margin-bottom: 15px;
-    margin-left: 20%;
+    margin-left: 30%;
     margin-right: 30%;
     font-size: 20px;
     color: #004D34;
@@ -82,9 +80,61 @@
 }
 .form{
     background-color: lightgray;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 10px;
 }
+legend{
+    font-size: 30px;
+    color: #004D34;
+    
+}
+.form-title{
+    color: #004D34 ;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/*----------------Button-------------*/
+.button a{
+  background-color: #f58eef;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button a:hover {
+    opacity: 1
+    
+}
+.submitButton{
+    float: right;
+}
+
+.button_with_no_border{
+    border: none;
+}
+
+
+/*--------Table --------*/
+th, td {
+  border: 1px solid #004D34;
+  padding: 20px;
+  text-align: center;
+}
+th{
+    background-color: #f58eef;
+}
+
 
 
 
