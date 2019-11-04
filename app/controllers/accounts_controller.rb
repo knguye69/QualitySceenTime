@@ -3,6 +3,7 @@ class AccountsController < ApplicationController
         @account = Account.find(params[:id])
     end 
     def new
+        @account = Account.new
     end
     
     def index
@@ -15,13 +16,14 @@ class AccountsController < ApplicationController
     
     def create
         @account = Account.new(account_params)
-        
-        
-        @account.save
-        redirect_to 
+        if @account.save 
+            redirect_to @account
+        else
+            render 'new'
+        end
+    
     end 
-    
-    
+
     
 end
 

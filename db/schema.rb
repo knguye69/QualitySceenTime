@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_180905) do
     t.string "age"
     t.string "userName"
     t.string "password"
+    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

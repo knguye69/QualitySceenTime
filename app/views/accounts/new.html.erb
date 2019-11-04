@@ -33,6 +33,22 @@
 
 
 <%= form_for :account, url: accounts_path do |a| %>
+
+<% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@account.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
 <fieldset>
     <legend>Form</legend>
     <div class= "form">
@@ -66,11 +82,17 @@
             <%= a.label :userName, "User Name: " %><br>
             <%= a.text_field :userName %>
         </p>
+        
+        
        
         <p class="input-form">
             <%= a.label :password, "Password: " %><br>
            <%= a.text_field :password %>
         </p>
+        
+        
+        
+        
        
         <p class= "submitButton">
             <a><%= a.submit %></a>
