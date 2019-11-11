@@ -1,6 +1,7 @@
 class AccountsController < ApplicationController
     def show
         @account = Account.find(params[:id])
+
     end 
     def new
     end
@@ -8,8 +9,6 @@ class AccountsController < ApplicationController
     def index
         @accounts = Account.all
     end
-    
-    
     
     
     def create
@@ -27,16 +26,3 @@ end
 private def account_params
         params.require(:account).permit(:fName,:lName,:email,:userName,:password,:age)
     end   
-
-    
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,128 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.title{
+    text-align: center;
+    font-size: 85px;
+    color: red;
+}
+.button{
+    float: right;
+}
+
+/* Navigation bar */
+.nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.5% 3%;
+    float: right;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 8px;
+}
+#lesson_nav{
+    background-color: #f58eef;
+}
+
+#lesson_nav:hover{
+    background-color: #b64fc2;
+}
+
+
+.nav a:hover{
+    background-color: #111;
+}
+
+.wallpaper1{
+    background: image-url('new1/URC_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+
+#logo{
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: darkgray;
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url('logo1.png');
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    
+}
+#logo:hover{
+    opacity: 1;
+}
+
+//Overide the padding
+#active{
+    float: left;
+    padding:0;
+}
+
+
+
+/*---------------User form-----------*/
+
+.input-form {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 20%;
+    margin-right: 30%;
+    font-size: 20px;
+    color: #004D34;
+    
+}
+.form{
+    background-color: lightgray;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+
+/***************Media Query*****************/
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+    .title{
+        font-size: 50px;
+    }
+    .wallpaper{
+        height: 250px;
+        position: relative;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
+    .wallpaper{
+        height: 500px;
+        position: relative;
+    }
+    .title{
+        font-size: 70px;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1201px) {
+    .wallpaper{
+        background-size: cover;
+        height: 800px;
+        position: relative;
+    }
+    .nav a{
+        font-size: 30px;
+        
+    }
+}
