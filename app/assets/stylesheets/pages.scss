@@ -35,11 +35,12 @@
 }
 
 .wallpaper1{
-    background: image-url('new1/URC_logo.png');
+    background: image-url('aboutImage/URC_logo.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
+    background-size: contain;
+    height: 350px; 
     position: relative;
+    border: 3px solid #73AD21;
 }
 
 #logo{
@@ -89,6 +90,51 @@
     margin-right: 20%;
 }
 
+p.excerpt{  
+border: 2px solid #0066FF;  
+background-color:#FFCC33;  
+}
+p.excerpt1{
+    font-family: "Times New Roman", Times, serif;
+    margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+
+}
+p.excerpt2{ 
+}
+  
+body {
+    padding: 2rem;
+    font-family: 'Just Another Hand', cursive;
+    background: #f3f3f3;
+    
+}
+
+.sketchy {
+    padding: 25px;
+    display: inline-block;
+    border: 3px solid #333333;
+    font-size: 1rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    position: relative;
+    
+    &::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+}
 
 
 /***************Media Query*****************/
@@ -125,4 +171,5 @@
         font-size: 30px;
         
     }
+    
 }
