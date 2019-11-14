@@ -16,7 +16,7 @@
                 
                 
                 <a href="">About</a>
-                <%= link_to 'User',new_account_path%>
+                <%= link_to 'Add new goal',new_account_path%>
                 <%= link_to 'User Info', accounts_path %>
                 <a id="lesson_nav" href="">Lesson</a>            
                         
@@ -27,7 +27,7 @@
         </div><!--End wallpaper and navigation bar-->
         
         
-<h1>Editing article</h1>
+<h1>Editing Account</h1>
  
 <%= form_for :account, url: account_path(@account), method: :patch do |a| %>
  
@@ -53,17 +53,17 @@
         
         
         <p class="input-form">
-            <%= a.label :fName,  "First Name" %><br>
+            <%= a.label :fName,  "Goal" %><br>
            <%= a.text_field :fName %>
         </p>
         
         <p class="input-form">
-            <%= a.label :lName, "Last Name:" %><br>
+            <%= a.label :lname, "Time to finish the goal:" %><br>
             <%= a.text_field :lName %>
         </p>
         
         <p class="input-form">
-            <%= a.label :email, "Email id:  " %><br>
+            <%= a.label :email, "Your motivation:" %><br>
             <%= a.text_field :email %>
         </p>
         
@@ -72,17 +72,15 @@
             <%= a.text_field :age %>
         </p>
         
-        <h3 class="form-title">Login information: </h3>
-        
         <p class="input-form">
-            <%= a.label :userName, "User Name: " %><br>
+            <%= a.label :userName, "Address: " %><br>
             <%= a.text_field :userName %>
         </p>
         
         
        
         <p class="input-form">
-            <%= a.label :password, "Password: " %><br>
+            <%= a.label :password, "Phone: " %><br>
            <%= a.text_field :password %>
         </p>
         

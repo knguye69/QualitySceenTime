@@ -50,7 +50,7 @@ end
 
     private 
         def account_params
-            params.require(:account).permit(:fName,:lName,:email,:age,:userName,:password)
+            params.require(:account).permit(:goal,:age,:addess,:city,:state,:zipcode)
         end   
 
 
