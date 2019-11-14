@@ -53,8 +53,8 @@
                         </div>
                         <p class="button">
                             <% if current_user %>
-                                Logged in as <%= current_user.name %>.
-                                <%= link_to "Log Out", logout_path %>
+                                <h1>Welcome back, <%= current_user.name %>.</h1>
+                                <div class="button"><%= link_to "Log Out", logout_path %></div>
                             <% else %>
                                 <%= link_to "Sign Up", signup_path %>
                             <% end %>

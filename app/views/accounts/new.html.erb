@@ -28,7 +28,7 @@
             </nav>
             
         </div><!--End wallpaper and navigation bar-->
-<h1 class="title">User information</h1>
+
 
 
 
@@ -50,55 +50,63 @@
     </div>
   <% end %>
 
+                            <% if current_user %>
+                                <h3 class="note">Hello, <%= current_user.name %>! Let us know your goals</h1>
+                                <fieldset>
+                                        <legend>Form</legend>
+                                        <div class= "form">
+                                            
+                                            <h3 class="form-title"> 
+                                                                
+                                            </h3>
+                                            
+                                            
+                                            <p class="input-form">
+                                                <%= a.label :fName,  "Goal" %><br>
+                                               <%= a.text_field :fName %>
+                                            </p>
+                                            
+                                            <p class="input-form">
+                                                <%= a.label :lname, "Time to finish the goal:" %><br>
+                                                <%= a.text_field :lName %>
+                                            </p>
+                                            
+                                            <p class="input-form">
+                                                <%= a.label :email, "Your motivation:" %><br>
+                                                <%= a.text_field :email %>
+                                            </p>
+                                            
+                                            <p class="input-form">
+                                                <%= a.label :age, "Age:" %><br>
+                                                <%= a.text_field :age %>
+                                            </p>
+                                            
+                                            <p class="input-form">
+                                                <%= a.label :userName, "Address: " %><br>
+                                                <%= a.text_field :userName %>
+                                            </p>
+                                            
+                                            
+                                           
+                                            <p class="input-form">
+                                                <%= a.label :password, "Phone: " %><br>
+                                               <%= a.text_field :password %>
+                                            </p>
+                                            
+                                            
+                                            
+                                            
+                                           
+                                            <p class= "submitButton">
+                                                <a><%= a.submit %></a>
+                                            </p>
+                                        </div>
+                                    </fieldset>
+                            <% else %>
+                                <h3 class="note">Hello, Please login before define your goal!</h1>
+                                <div class="button center"><%= link_to "Log In", login_path %></div>
+                            <% end %> 
 
-<fieldset>
-    <legend>Form</legend>
-    <div class= "form">
-        
-        <h3 class="form-title">User information: </h3>
-        
-        
-        <p class="input-form">
-            <%= a.label :fName,  "Goal" %><br>
-           <%= a.text_field :fName %>
-        </p>
-        
-        <p class="input-form">
-            <%= a.label :lname, "Time to finish the goal:" %><br>
-            <%= a.text_field :lName %>
-        </p>
-        
-        <p class="input-form">
-            <%= a.label :email, "Your motivation:" %><br>
-            <%= a.text_field :email %>
-        </p>
-        
-        <p class="input-form">
-            <%= a.label :age, "Age:" %><br>
-            <%= a.text_field :age %>
-        </p>
-        
-        <p class="input-form">
-            <%= a.label :userName, "Address: " %><br>
-            <%= a.text_field :userName %>
-        </p>
-        
-        
-       
-        <p class="input-form">
-            <%= a.label :password, "Phone: " %><br>
-           <%= a.text_field :password %>
-        </p>
-        
-        
-        
-        
-       
-        <p class= "submitButton">
-            <a><%= a.submit %></a>
-        </p>
-    </div>
-</fieldset>
 <% end %>
 
 

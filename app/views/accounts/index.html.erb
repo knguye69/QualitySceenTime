@@ -30,11 +30,13 @@
     Listing Goals
 </h1>
 
-<div class="button">
-    <%= link_to 'New Account', new_account_path%>
-</div>
 
 
+    <% if current_user %>
+    <h3 class="note">Hello <%= current_user.name %>, never stop reaching your goals!</h1>
+    <div class="button">
+        <%= link_to 'New Goal', new_account_path%>
+    </div>
 <table>
   <tr>
     <th>User</th>
@@ -74,6 +76,10 @@
     </tr>
   <% end %>
 </table>
+                            <% else %>
+                                <h3 class="note">Hello, Please login before checking your goals</h1>
+                                <div class="button center"><%= link_to "Log In", login_path %></div>
+                            <% end %> 
 
 
 <!--Footer-->
