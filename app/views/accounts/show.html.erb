@@ -3,43 +3,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--Wallpaper and navigation bar-->
-        <div class = "wallpaper">
+        <div class = "wallpaper1">
             
             <nav class="nav">
                 <!--Logo image-->
-                    <a id="active" href="#">
-                        <img id="logo" alt="logo">
-                    </a>
+                
+                    
+                    
+                    <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
                 
                 
                 <a href="">About</a>
-                
-                <%= link_to 'User', new_account_path %>
-                
-                <%= link_to 'User Info', accounts_path %>
-                
-                <a id="lesson_nav" href="">Lesson</a>   
-                
+                 <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %> 
+                <a id="lesson_nav" href="">Lesson</a>  
                 <%= link_to 'Login', login_path%>
-                        
                         
         
 
             </nav>
             
         </div><!--End wallpaper and navigation bar-->
-        
-        
-        <p class="button">
-            <% if current_user %>
-                Logged in as <%= current_user.name %>.
-                <%= link_to "Log Out", logout_path %>
-            <% else %>
-                <%= link_to "Sign Up", signup_path %>
-            <% end %>
-        </p>
-        
-        <!--Footer-->
+<p>
+    <strong>Goal: </strong>
+    <%= @account.fName %>
+</p>
+
+<p>
+    <strong>Time to finish the goal(s) in day(s): </strong>
+    <%= @account.lName %>
+</p>
+
+<p>
+    <strong>Your Motivation: </strong>
+    <%= @account.email%>
+</p>
+
+<p>
+    <strong>Age: </strong>
+    <%= @account.age %>
+</p>
+<p>
+    <strong>Address: </strong>
+    <%= @account.userName %>
+</p>
+<p>
+    <strong>Phone: </strong>
+    <%= @account.password %>
+</p>
+
+
+<!--Footer-->
                 <footer class="main-footer">
                     <div class="footer-col" >
                         <!--Social media icon-->

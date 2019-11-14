@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
+    @account = Account.all
   end
   
-  def new
-  end
+  
 end

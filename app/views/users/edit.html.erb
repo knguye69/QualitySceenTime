@@ -28,18 +28,22 @@
             </nav>
             
         </div><!--End wallpaper and navigation bar-->
-        
-        
-        <p class="button">
-            <% if current_user %>
-                Logged in as <%= current_user.name %>.
-                <%= link_to "Log Out", logout_path %>
-            <% else %>
-                <%= link_to "Sign Up", signup_path %>
-            <% end %>
-        </p>
-        
-        <!--Footer-->
+
+
+<div class="login-form">
+    <h1>Editing User</h1>
+
+    <%= render 'form', user: @user %>
+    
+    <%= link_to 'Show', @user %> |
+    <%= link_to 'Back', users_path %>
+</div>
+
+
+
+
+
+<!--Footer-->
                 <footer class="main-footer">
                     <div class="footer-col" >
                         <!--Social media icon-->

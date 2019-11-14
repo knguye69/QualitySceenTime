@@ -3,43 +3,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--Wallpaper and navigation bar-->
-        <div class = "wallpaper">
+        <div class = "wallpaper1">
             
             <nav class="nav">
                 <!--Logo image-->
-                    <a id="active" href="#">
-                        <img id="logo" alt="logo">
-                    </a>
+                
+                    
+                    
+                    <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
                 
                 
                 <a href="">About</a>
-                
-                <%= link_to 'User', new_account_path %>
-                
+                <%= link_to 'User',new_account_path%>
                 <%= link_to 'User Info', accounts_path %>
-                
-                <a id="lesson_nav" href="">Lesson</a>   
-                
+                <a id="lesson_nav" href="">Lesson</a>
                 <%= link_to 'Login', login_path%>
-                        
                         
         
 
             </nav>
-            
+             
         </div><!--End wallpaper and navigation bar-->
-        
-        
-        <p class="button">
-            <% if current_user %>
-                Logged in as <%= current_user.name %>.
-                <%= link_to "Log Out", logout_path %>
-            <% else %>
-                <%= link_to "Sign Up", signup_path %>
-            <% end %>
-        </p>
-        
-        <!--Footer-->
+<h1>
+    Listing Goals
+</h1>
+
+
+
+    <% if current_user %>
+    <h3 class="note">Hello <%= current_user.name %>, never stop reaching your goals!</h1>
+    <div class="button">
+        <%= link_to 'New Goal', new_account_path%>
+    </div>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Goal</th>
+    <th>Time</th>
+    <th>Motivation</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Phone</th>
+    
+    
+  </tr>
+ 
+  <% @accounts.each do |a| %>
+    <tr>
+    <td><% if a.user %>
+        <%= a.user.name %>
+        <% end %>
+    </td>
+      <td><%= a.fName %></td>
+      <td><%= a.lName %></td>
+      <td><%= a.email %></td>
+      <td><%= a.age %></td>
+      <td><%= a.userName %></td>
+      <td><%= a.password %></td>
+      
+      
+          <td class="button button_with_no_border"><%= link_to 'Show', account_path(a) %></td>
+      
+          <td class="button button_with_no_border"><%= link_to 'Edit', edit_account_path(a) %></td>
+          
+          <td class="button button_with_no_border"><%= link_to 'Destroy',
+                account_path(a),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+    
+    </tr>
+  <% end %>
+</table>
+                            <% else %>
+                                <h3 class="note">Hello, Please login before checking your goals</h1>
+                                <div class="button center"><%= link_to "Log In", login_path %></div>
+                            <% end %> 
+
+
+<!--Footer-->
                 <footer class="main-footer">
                     <div class="footer-col" >
                         <!--Social media icon-->

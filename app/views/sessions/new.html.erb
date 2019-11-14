@@ -18,7 +18,7 @@
                 
                 <%= link_to 'User Info', accounts_path %>
                 
-                <a id="lesson_nav" href="">Lesson</a>   
+                <a id="lesson_nav" href="">Lesson</a>  
                 
                 <%= link_to 'Login', login_path%>
                         
@@ -30,14 +30,36 @@
         </div><!--End wallpaper and navigation bar-->
         
         
-        <p class="button">
-            <% if current_user %>
-                Logged in as <%= current_user.name %>.
-                <%= link_to "Log Out", logout_path %>
-            <% else %>
-                <%= link_to "Sign Up", signup_path %>
-            <% end %>
-        </p>
+        
+        
+        <p id="alert"><%= alert %></p>
+                        
+                        <div class="login-form">
+                            <h1>Login</h1>
+                            <%= form_tag sessions_path do |form| %>
+                                <div class="field">
+                                    <%= label_tag :email %>
+                                    <%= text_field_tag :email %>
+                                </div>
+                                
+                                <div class="field">
+                                    <%= label_tag :password %>
+                                    <%= password_field_tag :password %>
+                                </div>
+                                <div class="actions">
+                                    <%= submit_tag "Login" %>
+                                </div>
+                            <% end %>
+                        </div>
+                        <p class="button">
+                            <% if current_user %>
+                                <h1>Welcome back, <%= current_user.name %>.</h1>
+                                <div class="button"><%= link_to "Log Out", logout_path %></div>
+                            <% else %>
+                                <%= link_to "Sign Up", signup_path %>
+                            <% end %>
+                        </p>
+                        
         
         <!--Footer-->
                 <footer class="main-footer">
@@ -69,6 +91,11 @@
                         </div>
 
                     </div>
+                    
+                    
+                    
+                    
+                    
 
 
                     <!--Copy right-->
