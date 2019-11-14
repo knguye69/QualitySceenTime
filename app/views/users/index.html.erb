@@ -3,56 +3,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--Wallpaper and navigation bar-->
-        <div class = "wallpaper1">
+        <div class = "wallpaper">
             
             <nav class="nav">
                 <!--Logo image-->
-                
-                    
-                    
-                    <%= link_to welcome_index_path do %>
-                   <%= image_tag "", id: "logo" %>
-                    <% end %>
+                    <a id="active" href="#">
+                        <img id="logo" alt="logo">
+                    </a>
                 
                 
                 <a href="">About</a>
-                 <%= link_to 'User',new_account_path%>
-                <%= link_to 'User Info', accounts_path %> 
-                <a id="lesson_nav" href="">Lesson</a>  
+                
+                <%= link_to 'User', new_account_path %>
+                
+                <%= link_to 'User Info', accounts_path %>
+                
+                <a id="lesson_nav" href="">Lesson</a>   
+                
                 <%= link_to 'Login', login_path%>
+                        
                         
         
 
             </nav>
             
         </div><!--End wallpaper and navigation bar-->
-<p>
-    <strong>Goal: </strong>
-    <%= @account.fName %>
-</p>
 
-<p>
-    <strong>Time to finish the goal(s) in day(s): </strong>
-    <%= @account.lName %>
-</p>
 
-<p>
-    <strong>Your Motivation: </strong>
-    <%= @account.email%>
-</p>
 
-<p>
-    <strong>Age: </strong>
-    <%= @account.age %>
-</p>
-<p>
-    <strong>Address: </strong>
-    <%= @account.userName %>
-</p>
-<p>
-    <strong>Phone: </strong>
-    <%= @account.password %>
-</p>
+<div class="login-form">
+  <p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+</div>
+
+
+
 
 
 <!--Footer-->

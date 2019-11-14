@@ -1,4 +1,6 @@
 class Account < ApplicationRecord
+    belongs_to :user
+    
     validates :fName, presence: true, length: {minimum: 1}
     validates :lName, presence: true, length: {minimum: 1}
     validates :email, presence: true, length: {minimum: 5}

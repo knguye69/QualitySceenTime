@@ -36,6 +36,9 @@ class AccountsController < ApplicationController
     
     def create
         @account = Account.new(account_params)
+        @account.user = current_user
+        
+        
         if @account.save 
             redirect_to @account
         else
