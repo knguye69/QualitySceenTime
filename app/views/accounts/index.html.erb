@@ -37,6 +37,7 @@
 
 <table>
   <tr>
+    <th>User</th>
     <th>Goal</th>
     <th>Time</th>
     <th>Motivation</th>
@@ -49,6 +50,10 @@
  
   <% @accounts.each do |a| %>
     <tr>
+    <td><% if a.user %>
+        <%= a.user.name %>
+        <% end %>
+    </td>
       <td><%= a.fName %></td>
       <td><%= a.lName %></td>
       <td><%= a.email %></td>
