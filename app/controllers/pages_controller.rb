@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
-def show
-            render template: "pages/#{params[:id]}"
+def index
+            # render template: "pages/#{params[:id]}"
+            render "pages/show.html.erb"
 
-    end
+end
 end
