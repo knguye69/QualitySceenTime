@@ -3,6 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/*
+    Human body picture
+*/
+.human-body{
+        
+        text-align: center;
+        display: relative;
+}
+.text_map a:hover{
+    color: #f58eef;
+    background-color: white;
+    
+}
+.text_map a{
+    text-decoration: none;
+}
+
 /* Navigation bar */
 .nav a{
     display: block;
@@ -12,7 +29,7 @@
     float: right;
     text-decoration: none;
     background-color: #333;
-    border-radius: 8px;
+    
 }
 #lesson_nav{
     background-color: #f58eef;
@@ -205,6 +222,10 @@
         height: 250px;
         position: relative;
     }
+    .body_map{
+        display: none;
+    }
+    
 }
 
 /* Tablet Styles */
@@ -212,6 +233,9 @@
     .wallpaper{
         height: 500px;
         position: relative;
+    }
+    .text_map{
+        display: none;
     }
 }
 
@@ -224,5 +248,8 @@
     }
     .nav a{
         font-size: 30px;
+    }
+    .text_map{
+        display: none;
     }
 }

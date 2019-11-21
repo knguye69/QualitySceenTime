@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-    has_one :accounts
+    has_many :accounts
     
-    VALID_EMAIL_REGEX = /A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
     before_save { self.email = email.downcase }
     
     validates :name,

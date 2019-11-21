@@ -18,11 +18,11 @@
                 
                 <%= link_to 'User Info', accounts_path %>
                 
-                <a id="lesson_nav" href="">Lesson</a>   
+                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>   
                 
-                <%= link_to 'Login', login_path%>
+                
                         
-                        
+                   
         
 
             </nav>
@@ -32,12 +32,49 @@
         
         <p class="button">
             <% if current_user %>
-                Logged in as <%= current_user.name %>.
-                <%= link_to "Log Out", logout_path %>
+
+                <div class="button"><%= link_to "Log Out", logout_path %></div>
+                <h3 class="note center">Choose a body part, <%= current_user.name %>!</h3>
+                <%= link_to 'Users Info', users_path %>
+                
+                <div class="body_map">
+                    <% if current_user.gender == "male" ||  current_user.gender == "Male"  %>
+                        <div class="human-body"><%= image_tag("male.png", :alt => "male") %></div>
+                        
+                    <% else%>
+                        
+                         <div class="human-body"><%= image_tag("female.png", :alt => "female", :width=> "300" ,:height=> "700", :usemap=> "#workmap") %></div>
+                         <map name="workmap">
+                              <area  coords="68,205,62,267,43,327,56,335,80,291,93,240" alt="right-arm" href="https://www.youtube.com/watch?v=XteEbNyPFg0">
+                              <area  coords="190,239,206,299,228,334,242,327,224,271,215,196" alt="left-arm" href="https://www.youtube.com/watch?v=XteEbNyPFg0">
+                              <area  coords="101,246,102,274,87,309,141,317,196,310,183,276,185,245" alt="abs" href="https://www.youtube.com/watch?v=MrV4vCotio0">
+                              <area  coords="82,330,77,386,98,460,133,460,132,361,108,340" alt="right-thigh" href="https://www.youtube.com/watch?v=gXla5bAx290">
+                              <area  coords="151,358,176,340,202,330,208,376,187,459,151,461,151,360" alt="left-thigh" href="https://www.youtube.com/watch?v=gXla5bAx290">
+                              <area  coords="102,503,101,558,116,613,131,614,133,556,131,520" alt="right-leg" href="https://www.youtube.com/watch?v=zT50JEqjRN8">
+                              <area  coords="154,514,152,561,153,609,169,611,184,552,185,510" alt="left-leg" href="https://www.youtube.com/watch?v=zT50JEqjRN8">
+                              <area  coords="127,132,120,152,80,170,71,184,113,176,174,177,210,178,187,161,165,152,157,134,142,142" alt="neck&shoulder" href="https://www.youtube.com/watch?v=oUychjqfO8I">
+                              
+                        </map>
+                    <% end %>
+                </div>
             <% else %>
-                <%= link_to "Sign Up", signup_path %>
+            <h2 class="note">Please login to start</h3>
+                <div class="button center"><%= link_to 'Login', login_path%></div>
+                <br>
+            <h2 class="note">New Member</h3>
+                <div class="button center"><%= link_to "Sign Up", signup_path %></div>
             <% end %>
         </p>
+        
+        
+        
+        <div class="text_map">
+            <a href="https://www.youtube.com/watch?v=XteEbNyPFg0"><h2>Arms</h2></a>
+            <a href="https://www.youtube.com/watch?v=MrV4vCotio0"><h2>Abs</h2></a>
+            <a href="https://www.youtube.com/watch?v=zT50JEqjRN8"><h2>Legs</h2></a>
+            <a href="https://www.youtube.com/watch?v=gXla5bAx290"><h2>Thigh</h2></a>
+            
+        </div>
         
         <!--Footer-->
                 <footer class="main-footer">
