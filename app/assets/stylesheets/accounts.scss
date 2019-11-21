@@ -23,7 +23,7 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 0.5% 1%;
+    padding: 1.5% 3%;
     float: right;
     text-decoration: none;
     background-color: #333;
@@ -57,14 +57,12 @@
     display: block;
     text-decoration: none;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: white;
     width: 100px;
     height: 80px;
     border-radius: 10px;
     background-image: url('logo1.png');
     background-position: center;
-    background-size: cover;
-    padding: 0;
     
 }
 #logo:hover{
@@ -163,6 +161,17 @@ th{
     .body_map{
         display: none;
     }
+    .form{
+        display: none;
+    }
+    #logo{
+        width: 50px;
+        height: 40px;
+       
+    }
+    .text_map{
+        display: display;
+    }
 }
 
 /* Tablet Styles */
@@ -174,6 +183,15 @@ th{
     .title{
         font-size: 70px;
     }
+    #logo{
+        width: 80px;
+        height: 70px;
+       
+    }
+    .text_map{
+        display: none;
+    }
+    
 }
 
 /* Desktop Styles */
@@ -186,5 +204,8 @@ th{
     .nav a{
         font-size: 30px;
         
+    }
+    .text_map{
+        display: none;
     }
 }

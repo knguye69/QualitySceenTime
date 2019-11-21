@@ -6,10 +6,7 @@
         <div class = "wallpaper">
             
             <nav class="nav">
-                <!--Logo image-->
-                    <a id="active" href="#">
-                        <img id="logo" alt="logo">
-                    </a>
+                
                 
                 
                 <a href="">About</a>
@@ -26,7 +23,10 @@
         
 
             </nav>
-            
+            <!--Logo image-->
+                    <%= link_to welcome_index_path do %>
+                       <%= image_tag "", id: "logo" %>
+                        <% end %>
         </div><!--End wallpaper and navigation bar-->
         
         

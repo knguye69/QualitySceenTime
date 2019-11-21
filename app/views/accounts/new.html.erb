@@ -10,9 +10,7 @@
 
                     
                     
-                    <%= link_to welcome_index_path do %>
-                   <%= image_tag "", id: "logo" %>
-                    <% end %>
+                    
 
                     
 
@@ -26,7 +24,9 @@
         
 
             </nav>
-            
+            <%= link_to welcome_index_path do %>
+                   <%= image_tag "", id: "logo" %>
+                    <% end %>
         </div><!--End wallpaper and navigation bar-->
 
 
@@ -53,7 +53,7 @@
                             <% if current_user %>
                                 <h3 class="note">Hello, <%= current_user.name %>! Let us know your goals</h1>
                                 <fieldset>
-                                        <legend>Form</legend>
+                                        <legend>Goal</legend>
                                         <div class= "form">
                                             
                                             <h3 class="form-title"> 

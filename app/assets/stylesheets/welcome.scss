@@ -48,7 +48,7 @@
     background-image: image-url('wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 450px;
     position: relative;
 }
 
@@ -59,13 +59,13 @@
     display: block;
     text-decoration: none;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: white;
     width: 100px;
     height: 80px;
     border-radius: 10px;
-    background-image: url('logo2.png');
+    background-image: url('logo1.png');
     background-position: center;
-    background-size: cover;
+    
     
     
 }
@@ -225,6 +225,14 @@
     .body_map{
         display: none;
     }
+    #logo{
+        width: 50px;
+        height: 40px;
+       
+    }
+    .form{
+        display: none;
+    }
     
 }
 
@@ -236,6 +244,11 @@
     }
     .text_map{
         display: none;
+    }
+    #logo{
+        width: 80px;
+        height: 70px;
+       
     }
 }
 
