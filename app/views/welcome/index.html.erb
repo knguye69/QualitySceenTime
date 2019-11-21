@@ -37,6 +37,14 @@
                 <h3 class="note center">Choose a body part, <%= current_user.name %>!</h3>
                 <%= link_to 'Users Info', users_path %>
                 
+                <div class="text_map">
+                    <a href="https://www.youtube.com/watch?v=XteEbNyPFg0"><h2>Arms</h2></a>
+                    <a href="https://www.youtube.com/watch?v=MrV4vCotio0"><h2>Abs</h2></a>
+                    <a href="https://www.youtube.com/watch?v=zT50JEqjRN8"><h2>Legs</h2></a>
+                    <a href="https://www.youtube.com/watch?v=gXla5bAx290"><h2>Thigh</h2></a>
+            
+                </div>
+                
                 <div class="body_map">
                     <% if current_user.gender == "male" ||  current_user.gender == "Male"  %>
                         <div class="human-body"><%= image_tag("male.png", :alt => "male") %></div>
@@ -68,13 +76,7 @@
         
         
         
-        <div class="text_map">
-            <a href="https://www.youtube.com/watch?v=XteEbNyPFg0"><h2>Arms</h2></a>
-            <a href="https://www.youtube.com/watch?v=MrV4vCotio0"><h2>Abs</h2></a>
-            <a href="https://www.youtube.com/watch?v=zT50JEqjRN8"><h2>Legs</h2></a>
-            <a href="https://www.youtube.com/watch?v=gXla5bAx290"><h2>Thigh</h2></a>
-            
-        </div>
+        
         
         <!--Footer-->
                 <footer class="main-footer">
