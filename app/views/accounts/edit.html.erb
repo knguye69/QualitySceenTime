@@ -10,50 +10,93 @@
                 
                     
                     
+                        
+                    
                     
                 
                 
                 <a href="">About</a>
-                 <%= link_to 'User',new_account_path%>
-                <%= link_to 'User Info', accounts_path %> 
-                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
+                <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %>
+                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>            
                 <%= link_to 'Login', login_path%>
-                        
         
 
             </nav>
             <%= link_to welcome_index_path do %>
-                   <%= image_tag "", id: "logo" %>
-                    <% end %>
+                       <%= image_tag "", id: "logo" %>
+                        <% end %>
+             
         </div><!--End wallpaper and navigation bar-->
-<p>
-    <strong>Goal: </strong>
-    <%= @account.fName %>
-</p>
-
-<p>
-    <strong>Time to finish the goal(s) in day(s): </strong>
-    <%= @account.lName %>
-</p>
-
-<p>
-    <strong>Your Motivation: </strong>
-    <%= @account.email%>
-</p>
-
-<p>
-    <strong>Age: </strong>
-    <%= @account.age %>
-</p>
-<p>
-    <strong>Gender: </strong>
-    <%= @account.userName %>
-</p>
-<p>
-    <strong>Phone: </strong>
-    <%= @account.password %>
-</p>
-
+        
+        
+<h1>Editing Account</h1>
+ 
+<%= form_for :account, url: account_path(@account), method: :patch do |a| %>
+ 
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@account.errors.count, "error") %> prohibited
+        this account from being saved:
+      </h2>
+      <ul>
+        <% @account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset>
+    <legend>Form</legend>
+    <div class= "form">
+        
+        <h3 class="form-title">User information: </h3>
+        
+        
+        <p class="input-form">
+            <%= a.label :fName,  "Goal" %><br>
+           <%= a.text_field :fName %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :lname, "Time to finish the goal:" %><br>
+            <%= a.text_field :lName %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :email, "Your motivation:" %><br>
+            <%= a.text_field :email %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :age, "Age:" %><br>
+            <%= a.text_field :age %>
+        </p>
+        
+        <p class="input-form">
+            <%= a.label :userName, "Gender: " %><br>
+            <%= a.text_field :userName %>
+        </p>
+        
+        
+       
+        <p class="input-form">
+            <%= a.label :password, "Phone: " %><br>
+           <%= a.text_field :password %>
+        </p>
+        
+        
+        
+        
+       
+        <p class= "submitButton">
+            <a><%= a.submit %></a>
+        </p>
+    </div>
+</fieldset>
+<% end %>
 
 <!--Footer-->
                 <footer class="main-footer">
