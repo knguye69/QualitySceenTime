@@ -36,6 +36,9 @@ class AccountsController < ApplicationController
     
     def create
         @account = Account.new(account_params)
+        @account.user = current_user
+        
+        
         if @account.save 
             redirect_to @account
         else
@@ -51,7 +54,7 @@ end
 
     private 
         def account_params
-            params.require(:account).permit(:fName,:lName,:email,:age,:userName,:password)
+            params.require(:account).permit(:fName,:age,:lName,:userName,:password,:email)
         end   
 
 

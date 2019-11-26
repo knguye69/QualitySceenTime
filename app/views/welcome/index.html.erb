@@ -1,12 +1,12 @@
+<!--Social media icons-->
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--Wallpaper and navigation bar-->
         <div class = "wallpaper">
             
             <nav class="nav">
-                <!--Logo image-->
-                    <a id="active" href="#">
-                        <img id="logo" alt="logo">
-                    </a>
+                
                 
                 
                 <a href="">About</a>
@@ -15,11 +15,107 @@
                 
                 <%= link_to 'User Info', accounts_path %>
                 
-                <a id="lesson_nav" href="">Lesson</a>            
+                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>   
+                
+                
                         
-                        
+                   
         
 
             </nav>
-            
+            <!--Logo image-->
+                    <%= link_to welcome_index_path do %>
+                       <%= image_tag "", id: "logo" %>
+                        <% end %>
         </div><!--End wallpaper and navigation bar-->
+        
+        
+        <p class="button">
+            <% if current_user %>
+
+                <div class="button"><%= link_to "Log Out", logout_path %></div>
+                <h3 class="note center">Choose a body part, <%= current_user.name %>!</h3>
+                <%= link_to 'Users Info', users_path %>
+                
+                <div class="text_map">
+                    <a href="https://www.youtube.com/watch?v=XteEbNyPFg0"><h2>Arms</h2></a>
+                    <a href="https://www.youtube.com/watch?v=MrV4vCotio0"><h2>Abs</h2></a>
+                    <a href="https://www.youtube.com/watch?v=zT50JEqjRN8"><h2>Legs</h2></a>
+                    <a href="https://www.youtube.com/watch?v=gXla5bAx290"><h2>Thigh</h2></a>
+            
+                </div>
+                
+                <div class="body_map">
+                    <% if current_user.gender == "male" ||  current_user.gender == "Male"  %>
+                        <div class="human-body"><%= image_tag("male.png", :alt => "male") %></div>
+                        
+                    <% else%>
+                        
+                         <div class="human-body"><%= image_tag("female.png", :alt => "female", :width=> "300" ,:height=> "700", :usemap=> "#workmap") %></div>
+                         <map name="workmap">
+                              <area  coords="68,205,62,267,43,327,56,335,80,291,93,240" alt="right-arm" href="https://www.youtube.com/watch?v=XteEbNyPFg0">
+                              <area  coords="190,239,206,299,228,334,242,327,224,271,215,196" alt="left-arm" href="https://www.youtube.com/watch?v=XteEbNyPFg0">
+                              <area  coords="101,246,102,274,87,309,141,317,196,310,183,276,185,245" alt="abs" href="https://www.youtube.com/watch?v=MrV4vCotio0">
+                              <area  coords="82,330,77,386,98,460,133,460,132,361,108,340" alt="right-thigh" href="https://www.youtube.com/watch?v=gXla5bAx290">
+                              <area  coords="151,358,176,340,202,330,208,376,187,459,151,461,151,360" alt="left-thigh" href="https://www.youtube.com/watch?v=gXla5bAx290">
+                              <area  coords="102,503,101,558,116,613,131,614,133,556,131,520" alt="right-leg" href="https://www.youtube.com/watch?v=zT50JEqjRN8">
+                              <area  coords="154,514,152,561,153,609,169,611,184,552,185,510" alt="left-leg" href="https://www.youtube.com/watch?v=zT50JEqjRN8">
+                              <area  coords="127,132,120,152,80,170,71,184,113,176,174,177,210,178,187,161,165,152,157,134,142,142" alt="neck&shoulder" href="https://www.youtube.com/watch?v=oUychjqfO8I">
+                              
+                        </map>
+                    <% end %>
+                </div>
+            <% else %>
+            <h2 class="note">Please login to start</h3>
+                <div class="button center"><%= link_to 'Login', login_path%></div>
+                <br>
+            <h2 class="note">New Member</h3>
+                <div class="button center"><%= link_to "Sign Up", signup_path %></div>
+            <% end %>
+        </p>
+        
+        
+        
+        
+        
+        <!--Footer-->
+                <footer class="main-footer">
+                    <div class="footer-col" >
+                        <!--Social media icon-->
+                        <div class="social-icon">
+                            <a href="https://twitter.com" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+                            <a href="https://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+                            <a href="https://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+                        </div>
+
+                        <!--Our mission part-->
+                        <div class="our-mission" >
+                            <h2>Our mission</h2>
+                            
+                        </div>
+
+                        <!--Contact button and google map-->
+                        <div class="text-button">
+                            <!--Map-->
+                            <div class="mapouter">
+                                <div class="gmap_canvas">
+                                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=unc%20charlotte&t=&z=13&ie=UTF8&iwloc=&output=embed" >
+                                    </iframe>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!--Copy right-->
+                    <div id="footer-bottom">
+                        <hr>
+                        <a href="#top">Back to top &raquo;</a>
+                        <p>All rights reserved.</p>
+                        <p>&copy;Copyright 2019. All other trademarks and copyrights are the
+                            property of their respective holders..</p>
+                    </div>
+                </footer>
