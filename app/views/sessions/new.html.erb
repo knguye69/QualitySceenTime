@@ -12,17 +12,21 @@
                     </a>
                 
                 
-                <a href="">About</a>
                 
-                <%= link_to 'User', new_account_path %>
-                
-                <%= link_to 'User Info', accounts_path %>
-                
-                <a id="lesson_nav" href="">Lesson</a>  
-                
+        
+                 <% if current_user %>
+                 <a href="">About</a>
+                 <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %> 
+                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
+                <%= link_to 'Log out', logout_path%>
+                 <% else %>
+                 <a href="">About</a>
+                 <%= link_to 'User',new_account_path%>
+                <%= link_to 'User Info', accounts_path %> 
+                <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
                 <%= link_to 'Login', login_path%>
-                        
-                        
+                <% end %>       
         
 
             </nav>
