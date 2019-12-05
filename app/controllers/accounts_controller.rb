@@ -1,6 +1,7 @@
 class AccountsController < ApplicationController
     def show
         @account = Account.find(params[:id])
+
     end 
     def new
         @account = Account.new
@@ -32,8 +33,6 @@ class AccountsController < ApplicationController
     
 
     
-    
-    
     def create
         @account = Account.new(account_params)
         @account.user = current_user
@@ -49,6 +48,7 @@ class AccountsController < ApplicationController
 
     
 end
+
 
 
     private 
