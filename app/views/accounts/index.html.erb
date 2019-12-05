@@ -14,13 +14,13 @@
                 
                 
                 <% if current_user %>
-                 <a href="">About</a>
+                 <%= link_to 'About', pages_path %>
                  <%= link_to 'User',new_account_path%>
                 <%= link_to 'User Info', accounts_path %> 
                 <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
                 <%= link_to 'Log out', logout_path%>
                  <% else %>
-                 <a href="">About</a>
+                 <%= link_to 'About', pages_path %>
                  <%= link_to 'User',new_account_path%>
                 <%= link_to 'User Info', accounts_path %> 
                 <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
