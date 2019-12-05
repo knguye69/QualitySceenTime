@@ -21,3 +21,13 @@ Then("I should see the {string} field") do |string|
 When("I click on the {string} button") do |string|
   click_button string
 end
+
+
+And("I fill in {string} with {string}") do |string, string2|
+  fill_in("Email", :with => "radhavinay337@gmail.com")
+  
+end
+
+#And("I fill in {string} with {string}") do |string, string2|
+#  fill_in("Goal", :with => "Do 5 push ups")
+#end
