@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_185943) do
+ActiveRecord::Schema.define(version: 2019_12_05_171530) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string "fName"
-    t.string "lName"
-    t.string "email"
-    t.string "age"
-    t.string "userName"
-    t.string "password"
+    t.string "goal"
+    t.string "time"
+    t.string "motivation"
+    t.string "plan"
+    t.string "hoursPerDay"
+    t.string "daysPerWeek"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

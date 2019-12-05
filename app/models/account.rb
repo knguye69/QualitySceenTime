@@ -1,12 +1,12 @@
 class Account < ApplicationRecord
     belongs_to :user
     
-    validates :fName, presence: true
-    validates :lName, presence: true
-    validates :email, presence: true
-    validates :age, presence: true
-    validates :userName, presence: true
-    validates :password, presence: true
+    validates :goal, presence: true
+    validates :time, presence: true
+    validates :motivation, presence: true
+    validates :plan, presence: true
+    validates :hoursPerDay, presence: true
+    validates :daysPerWeek, presence: true
     
     
 end
