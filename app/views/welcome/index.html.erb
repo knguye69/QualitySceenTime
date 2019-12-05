@@ -46,7 +46,7 @@
                 </div>
                 
                 <div class="body_map">
-                    <% if current_user.gender == "male" ||  current_user.gender == "Male"  %>
+                    <% if current_user.gender == "male" ||  current_user.gender == "Male" ||  current_user.gender == "M" ||  current_user.gender == "m" %>
                         <div class="human-body"><%= image_tag("male.png", :alt => "male" , :width=> "500" ,:height=> "500", :usemap=> "#workmap") %></div>
                             <map name="workmap">
                               <area  coords="310,150,293,182,305,224,338,239,343,231,320,216,311,150" alt="right-arm" href="https://www.youtube.com/watch?v=CLccU7tk7es">
