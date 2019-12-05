@@ -4,4 +4,8 @@ def index
             render "pages/show.html.erb"
 
 end
+def create
+    render "pages/show.html.erb"
+end 
+
 end

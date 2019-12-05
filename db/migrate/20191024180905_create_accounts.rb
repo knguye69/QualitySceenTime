@@ -1,12 +1,12 @@
 class CreateAccounts < ActiveRecord::Migration[5.2]
   def change
     create_table :accounts do |t|
-      t.string :goal
-      t.string :time
-      t.string :motivation
-      t.string :plan
-      t.string :hoursPerDay
-      t.string :daysPerWeek
+      t.string :fName
+      t.string :lName
+      t.string :email
+      t.string :age
+      t.string :userName
+      t.string :password
       
       t.timestamps
     end
