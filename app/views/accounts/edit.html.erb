@@ -16,13 +16,13 @@
                 
                 
                 <% if current_user %>
-                 <%= link_to 'About', pages_path %>
+                 <a href="">About</a>
                  <%= link_to 'User',new_account_path%>
                 <%= link_to 'User Info', accounts_path %> 
                 <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
                 <%= link_to 'Log out', logout_path%>
                  <% else %>
-                 <%= link_to 'About', pages_path %>
+                 <a href="">About</a>
                  <%= link_to 'User',new_account_path%>
                 <%= link_to 'User Info', accounts_path %> 
                 <div id="lesson_nav"><%= link_to 'Lesson', welcome_index_path %></div>  
@@ -64,8 +64,8 @@
         
         
         <p class="input-form">
-            <%= a.label :goal,  "Goal" %><br>
-           <%= a.text_field :goal %>
+            <%= a.label :goal1,  "Goal" %><br>
+           <%= a.text_field :goal1 %>
         </p>
         
         <p class="input-form">
