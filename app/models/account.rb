@@ -1,7 +1,7 @@
 class Account < ApplicationRecord
     belongs_to :user
     
-    validates :goal1, presence: true
+    validates :goal, presence: true
     validates :time, presence: true
     validates :motivation, presence: true
     validates :plan, presence: true

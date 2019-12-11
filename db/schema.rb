@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_210801) do
+ActiveRecord::Schema.define(version: 2019_12_11_181136) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string "goal1"
+    t.string "goal"
     t.string "time"
     t.string "motivation"
     t.string "plan"
